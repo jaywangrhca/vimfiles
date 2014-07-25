@@ -238,3 +238,39 @@
 [submodule "bundle/ShowTrailingWhitespace"]
 	path = bundle/ShowTrailingWhitespace
 	url = git@github.com:vim-scripts/ShowTrailingWhitespace.git
+[submodule "bundle/Vundle.vim"]
+	path = bundle/Vundle.vim
+	url = git@github.com:gmarik/Vundle.vim.git
+[submodule "bundle/emmet-vim"]
+	path = bundle/emmet-vim
+	url = git@github.com:mattn/emmet-vim.git
+[submodule "bundle/fencview"]
+	path = bundle/fencview
+	url = git@github.com:mbbill/fencview.git
+[submodule "bundle/indentLine"]
+	path = bundle/indentLine
+	url = git@github.com:Yggdroot/indentLine.git
+[submodule "bundle/matchit"]
+	path = bundle/matchit
+	url = git@github.com:tmhedberg/matchit.git
+[submodule "bundle/powerline-fonts"]
+	path = bundle/powerline-fonts
+	url = git@github.com:Lokaltog/powerline-fonts.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = git@github.com:majutsushi/tagbar.git
+[submodule "bundle/vim-easymotion"]
+	path = bundle/vim-easymotion
+	url = git@github.com:Lokaltog/vim-easymotion.git
+[submodule "bundle/vim-emacs-bindings"]
+	path = bundle/vim-emacs-bindings
+	url = git@github.com:maxbrunsfeld/vim-emacs-bindings.git
+[submodule "bundle/vim-plugins"]
+	path = bundle/vim-plugins
+	url = git@github.com:WolfgangMehner/vim-plugins.git
+[submodule "bundle/vim-ruby"]
+	path = bundle/vim-ruby
+	url = git@github.com:vim-ruby/vim-ruby.git
+[submodule "bundle/vim-rails"]
+	path = bundle/vim-rails
+	url = git@github.com:tpope/vim-rails.git
