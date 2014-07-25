@@ -235,3 +235,6 @@
 [submodule "bundle/ZoomWin"]
   path = bundle/ZoomWin
   url = https://github.com/vim-scripts/ZoomWin.git
+[submodule "bundle/ShowTrailingWhitespace"]
+	path = bundle/ShowTrailingWhitespace
+	url = git@github.com:vim-scripts/ShowTrailingWhitespace.git
