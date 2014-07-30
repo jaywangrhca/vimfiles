@@ -49,6 +49,9 @@ let g:mapleader=" "
   Bundle 'vim-ruby/vim-ruby'
   " vim-rails
   Bundle 'tpope/vim-rails'
+  " ri.vim  lets you search and navigate Ruby library and gem documentation
+  " inside Vim
+  Bundle 'danchoi/ri.vim'
   " emmet-vim for HTML and CSS
   Bundle 'mattn/emmet-vim'
   " navigation and editing key bindings from emacs
@@ -389,6 +392,8 @@ autocmd VimEnter * nested :TagbarOpen
 " indentLine
 """""""""""""
 let g:indentLine_color_gui = '#A4E57E'
+let g:indentLine_color_term = 255
+let g:indentLine_color_tty_light = 7
 """""""""""""
 " supertab
 """""""""""""
@@ -396,6 +401,13 @@ autocmd FileType ruby,eruby let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+
+"""""""""""""
+" ri.vim
+"""""""""""""
+nnoremap  ,ri :call ri#OpenSearchPrompt(0)<cr> " horizontal split
+nnoremap  ,RI :call ri#OpenSearchPrompt(1)<cr> " vertical split
+nnoremap  ,RK :call ri#LookupNameUnderCursor()<cr> " keyword lookup
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
