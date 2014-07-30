@@ -61,6 +61,7 @@ let g:mapleader=" "
   " bash perl support
   Bundle 'WolfgangMehner/vim-plugins'
   Bundle 'Lokaltog/powerline-fonts'
+  Bundle 'Raimondi/delimitMate'
 
 " CSApprox: Make gvim-only colorschemes work in terminal vim -----------------
   " Bundle 'godlygeek/csapprox'
@@ -392,8 +393,10 @@ autocmd VimEnter * nested :TagbarOpen
 " indentLine
 """""""""""""
 let g:indentLine_color_gui = '#A4E57E'
-let g:indentLine_color_term = 255
+let g:indentLine_color_term = 100
 let g:indentLine_color_tty_light = 7
+let g:indentLine_color_dark = 1
+let g:indentLine_char = '┆'
 """""""""""""
 " supertab
 """""""""""""

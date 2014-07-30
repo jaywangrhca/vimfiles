@@ -277,3 +277,6 @@
 [submodule "bundle/ri.vim"]
 	path = bundle/ri.vim
 	url = git@github.com:danchoi/ri.vim.git
+[submodule "bundle/delimitMate"]
+	path = bundle/delimitMate
+	url = git@github.com:Raimondi/delimitMate.git
