@@ -63,6 +63,9 @@ let g:mapleader=" "
   Bundle 'Lokaltog/powerline-fonts'
   Bundle 'Raimondi/delimitMate'
 
+  Bundle 'vim-scripts/bats.vim'
+  Bundle 'jjasghar/snipmate-snippets'
+
 " CSApprox: Make gvim-only colorschemes work in terminal vim -----------------
   " Bundle 'godlygeek/csapprox'
   "
