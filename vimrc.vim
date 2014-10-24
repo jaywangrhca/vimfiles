@@ -836,7 +836,7 @@ set complete=.,w
 " set ft=todolist
 set clipboard=unnamed
 set guioptions-=m
-
+language messages utf-8
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 
