@@ -65,6 +65,7 @@ let g:mapleader=" "
 
   Bundle 'vim-scripts/bats.vim'
   Bundle 'jjasghar/snipmate-snippets'
+  Bundle "narkisr/vim-chef"
 
 " CSApprox: Make gvim-only colorschemes work in terminal vim -----------------
   " Bundle 'godlygeek/csapprox'
@@ -342,7 +343,7 @@ if $VIM_MINIMAL != '1'
   Bundle 'kien/ctrlp.vim'
 
   " map <C-t> :CtrlPTag<Cr>
-  map <C-b> :CtrlPBuffer<Cr>
+  map <C-t> :CtrlPBuffer<Cr>
   map <leader>pb :CtrlPBuffer<Cr>
   map <leader>pt :CtrlPTag<Cr>
   map <leader>pp :CtrlP<Cr>
@@ -836,7 +837,6 @@ set complete=.,w
 " set ft=todolist
 set clipboard=unnamed
 set guioptions-=m
-language messages utf-8
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 

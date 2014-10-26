@@ -65,6 +65,8 @@ let g:mapleader=" "
 
   Bundle 'vim-scripts/bats.vim'
   Bundle 'jjasghar/snipmate-snippets'
+  Bundle "narkisr/vim-chef"
+
 " CSApprox: Make gvim-only colorschemes work in terminal vim -----------------
   " Bundle 'godlygeek/csapprox'
   "
