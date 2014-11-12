@@ -343,7 +343,7 @@ if $VIM_MINIMAL != '1'
   Bundle 'kien/ctrlp.vim'
 
   " map <C-t> :CtrlPTag<Cr>
-  map <C-b> :CtrlPBuffer<Cr>
+  map <C-t> :CtrlPBuffer<Cr>
   map <leader>pb :CtrlPBuffer<Cr>
   map <leader>pt :CtrlPTag<Cr>
   map <leader>pp :CtrlP<Cr>
