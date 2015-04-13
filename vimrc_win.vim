@@ -353,9 +353,14 @@ if $VIM_MINIMAL != '1'
   "" :G...
 
   autocmd QuickFixCmdPost *grep* cwindow  " Open Ggrep in quickfix window
+" SnipMate
+  Bundle "MarcWeber/vim-addon-mw-utils"
+  Bundle "tomtom/tlib_vim"
+  Bundle "garbas/vim-snipmate"
 
 " " UltiSnips: Tab snippets ----------------------------------------------------
 "   Bundle 'SirVer/ultisnips'
+   Bundle 'honza/vim-snippets'
 " 
 "   "" <Tab>  - Expand snippet
 " 
@@ -378,19 +383,19 @@ if $VIM_MINIMAL != '1'
   " let g:ctrlp_working_path_mode=2
 
 " Syntax bundles -------------------------------------------------------------
- 
-   Bundle 'tpope/vim-haml'
-   Bundle 'vim-coffee-script'
-   Bundle 'tpope/vim-markdown'
-   Bundle 'jade.vim'
-   Bundle 'cakebaker/scss-syntax.vim'
-   Bundle 'vim-scripts/jQuery'
-   Bundle 'Textile-for-VIM'
-   Bundle 'ledger/vim-ledger'
-   Bundle 'hsitz/VimOrganizer'
-   Bundle 'git://gist.github.com/369178.git'
-   " Less syntax
- 
+
+  Bundle 'tpope/vim-haml'
+  Bundle 'vim-coffee-script'
+  Bundle 'tpope/vim-markdown'
+  Bundle 'jade.vim'
+  Bundle 'cakebaker/scss-syntax.vim'
+  Bundle 'vim-scripts/jQuery'
+  Bundle 'Textile-for-VIM'
+  Bundle 'ledger/vim-ledger'
+  Bundle 'hsitz/VimOrganizer'
+  Bundle 'git://gist.github.com/369178.git'
+  " Less syntax
+
 endif
 " ============================================================================
 

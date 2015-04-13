@@ -12,12 +12,12 @@ filetype off
 """""""""""""
 " adjust configuration for such hostile environment as Windows
 if has("win32") || has("win16")
-    source $VIMRUNTIME/../vimfiles/bundle/Vundle.vim/autoload/vundle.vim
+    source $VIMRUNTIME/../../../Data/vimfiles/bundle/Vundle.vim/autoload/vundle.vim
     set nocompatible              " be iMproved
     filetype off                  " required!
-    set rtp+=$VIMRUNTIME/../vimfiles/bundle/Vundle.vim/
+    set rtp+=$VIMRUNTIME/../../../Data/vimfiles/bundle/Vundle.vim/
     " change bundle install dir
-    call vundle#rc("$VIMRUNTIME/../vimfiles/bundle/")
+    call vundle#rc("$VIMRUNTIME/../../../Data/vimfiles/bundle/")
 else
     source ~/vimfiles/bundle/Vundle.vim/autoload/vundle.vim
     set nocompatible              " be iMproved
@@ -66,7 +66,6 @@ let g:mapleader=" "
   Bundle 'vim-scripts/bats.vim'
   Bundle 'jjasghar/snipmate-snippets'
   Bundle "narkisr/vim-chef"
-
 " CSApprox: Make gvim-only colorschemes work in terminal vim -----------------
   " Bundle 'godlygeek/csapprox'
   "
@@ -325,10 +324,15 @@ if $VIM_MINIMAL != '1'
   "" :G...
 
   autocmd QuickFixCmdPost *grep* cwindow  " Open Ggrep in quickfix window
+" SnipMate
+  Bundle "MarcWeber/vim-addon-mw-utils"
+  Bundle "tomtom/tlib_vim"
+"  Bundle "garbas/vim-snipmate"
 
-" UltiSnips: Tab snippets ----------------------------------------------------
-  Bundle 'SirVer/ultisnips'
-
+" " UltiSnips: Tab snippets ----------------------------------------------------
+   Bundle 'SirVer/ultisnips'
+   Bundle 'honza/vim-snippets'
+" 
   "" <Tab>  - Expand snippet
 
   let g:UltiSnipsExpandTrigger="<tab>"
@@ -511,7 +515,9 @@ if has("gui_running")
 endif
 
 " Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=ucs-bom,utf8,prc
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
