@@ -35,7 +35,8 @@ let g:mapleader=" "
   "" :BundleInstall(!)    - install(update) bundles
   "" :BundleSearch(!) foo - search(or refresh cache first) for foo
   "" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-
+  Bundle 'elzr/vim-json'
+  "better json
   Bundle 'majutsushi/tagbar' 
   "在文档中高效的移动光标
   Bundle 'Lokaltog/vim-easymotion' 
@@ -119,6 +120,7 @@ let g:mapleader=" "
   let NERDTreeMinimalUI=1
   let NERDTreeStatusline=' '
   let NERDTreeWinPos='left'
+  let NERDTreeWinSize=50
   let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
   map <leader>nd :NERDTreeToggle<CR>
   map <leader>nt :e .<CR>
