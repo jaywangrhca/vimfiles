@@ -737,7 +737,7 @@ if has("mac") || has("macunix")
 elseif has("win16") || has("win32")
     set gfn=DejaVu\ Sans\ Mono\ for\ Powerline:h11
 elseif has("linux")
-    set gfn=Monospace\ 10
+    set gfn=Monospace\ 11
     set shell=/bin/bash
 endif
 
