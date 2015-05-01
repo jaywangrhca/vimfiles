@@ -35,6 +35,8 @@ let g:mapleader=" "
   "" :BundleInstall(!)    - install(update) bundles
   "" :BundleSearch(!) foo - search(or refresh cache first) for foo
   "" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+  Bundle 'kshenoy/vim-signature'
+  "Plugin to toggle, display and navigate marks
   Bundle 'elzr/vim-json'
   "better json
   Bundle 'majutsushi/tagbar' 
