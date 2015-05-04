@@ -35,6 +35,8 @@ let g:mapleader=" "
   "" :BundleInstall(!)    - install(update) bundles
   "" :BundleSearch(!) foo - search(or refresh cache first) for foo
   "" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+  Bundle 'airblade/vim-gitgutter'
+  "A Vim plugin which shows a git diff in the gutter (sign column) and stages/reverts hunks. 
   Bundle 'kshenoy/vim-signature'
   "Plugin to toggle, display and navigate marks
   Bundle 'elzr/vim-json'
@@ -177,25 +179,27 @@ if $VIM_MINIMAL != '1'
 " Airline: Lightweight powerline ---------------------------------------------
   Bundle 'bling/vim-airline'
 
+  let g:airline_section_c = '%{strftime("%c")}'
+  let g:airline_section_y = 'BN: %{bufnr("%")}'
+  let g:airline#extensions#branch#enabled = 1
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#tabline#left_sep = '▶'
+  let g:airline#extensions#tabline#left_alt_sep = '»'
+  let g:airline#extensions#hunks#enabled = 1
+  let g:airline_left_sep='>'
+
   if !exists('g:airline_symbols')
     let g:airline_symbols = {}
   endif
 
-  " Vim-powerline symbols
-  let g:airline_powerline_fonts=1
-  "let g:airline_left_sep
-  "let g:airline_left_alt_sep
-  "let g:airline_right_sep
-  "let g:airline_right_alt_sep
-  "let g:airline_symbols.branch
-  "let g:airline_symbols.readonly
-  "let g:airline_symbols.linenr
 
-  "" No filetype
-  "let g:airline_section_x = ''
-  "let g:airline_section_z = '%3p%%'
-  "let g:airline_section_y = g:airline_symbols.linenr . '%4l ⋅%2c'
-  "let g:airline#extensions#hunks#enabled = 0
+  " unicode symbols
+  let g:airline_left_sep = '▶'
+  let g:airline_right_sep = '◀'
+  let g:airline_symbols.linenr = '␤'
+  let g:airline_symbols.branch = '⎇'
+  let g:airline_symbols.paste = 'Þ'
+  let g:airline_symbols.whitespace = 'Ξ'
 
   "" Themes
   "let g:airline_theme='solarized'
