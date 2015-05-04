@@ -690,9 +690,9 @@ vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 inoremap <M-f> <C-o>e<Right>
 "vnoremap <M-f> <C-o>e<Right>
 cnoremap <M-f> <C-o>e<Right>
-inoremap <M-b> <S-Left>
-"vnoremap <M-b> <S-Left>
-cnoremap <M-b> <S-Left>
+inoremap <M-b> <C-o>b
+"vnoremap <M-b> <C-o>b
+cnoremap <M-b> <C-o>b
 
 if has("mac") || has("macunix")
   nmap <D-j> <M-j>
