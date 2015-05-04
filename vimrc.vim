@@ -525,7 +525,7 @@ endif
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf-8
 set fileencoding=utf-8
-set fileencodings=ucs-bom,utf8,prc
+"set fileencodings=ucs-bom,utf8,prc
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
