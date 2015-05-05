@@ -856,6 +856,7 @@ nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 set textwidth=78
 set complete=.,w
 " set ft=todolist
+set fileformat=unix
 set clipboard=unnamed
 set guioptions-=m
 autocmd VimEnter * NERDTree
