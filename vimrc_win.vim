@@ -693,6 +693,7 @@ cnoremap <M-f> <C-o>e<Right>
 inoremap <M-b> <C-o>b
 "vnoremap <M-b> <C-o>b
 cnoremap <M-b> <C-o>b
+noremap! <M-d> <C-O>dw
 
 if has("mac") || has("macunix")
   nmap <D-j> <M-j>
