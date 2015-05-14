@@ -858,7 +858,7 @@ set textwidth=78
 set complete=.,w
 " set ft=todolist
 set fileformat=unix
-set clipboard=unnamed
+set clipboard=unnamedplus
 set guioptions-=m
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p

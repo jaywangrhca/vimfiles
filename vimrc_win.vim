@@ -887,7 +887,7 @@ set textwidth=78
 set complete=.,w
 " set ft=todolist
 set fileformat=unix
-set clipboard=unnamed
+set clipboard=unnamedplus
 set guioptions-=m
 set guifont=DejaVu\ Sans\ Mono:h11
 language messages utf-8
