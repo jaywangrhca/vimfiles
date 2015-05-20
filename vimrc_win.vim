@@ -487,6 +487,7 @@ nmap <leader>w :w!<cr>
 set so=7
 
 " Turn on the WiLd menu
+set wildmode=longest,list,full
 set wildmenu
 
 " Ignore compiled files
