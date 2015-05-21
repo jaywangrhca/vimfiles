@@ -35,6 +35,8 @@ let g:mapleader=" "
   "" :BundleInstall(!)    - install(update) bundles
   "" :BundleSearch(!) foo - search(or refresh cache first) for foo
   "" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+  Bundle 'm-kat/aws-vim'
+  "aws-vim
   Bundle 'airblade/vim-gitgutter'
   "A Vim plugin which shows a git diff in the gutter (sign column) and stages/reverts hunks. 
   Bundle 'kshenoy/vim-signature'
