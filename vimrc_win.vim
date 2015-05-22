@@ -366,18 +366,19 @@ if $VIM_MINIMAL != '1'
 " SnipMate
   Bundle "MarcWeber/vim-addon-mw-utils"
   Bundle "tomtom/tlib_vim"
-  Bundle "garbas/vim-snipmate"
+"  Bundle 'garbas/vim-snipmate'
 
 " " UltiSnips: Tab snippets ----------------------------------------------------
-"   Bundle 'SirVer/ultisnips'
    Bundle 'honza/vim-snippets'
+   Bundle 'SirVer/ultisnips'
 " 
-"   "" <Tab>  - Expand snippet
+"  <Tab>  - Expand snippet
 " 
-"   let g:UltiSnipsExpandTrigger="<tab>"
-"   let g:UltiSnipsJumpForwardTrigger="<tab>"
-"   let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-"   let g:UltiSnipsDontReverseSearchPath=0
+   let g:UltiSnipsUsePythonVersion = 3
+   let g:UltiSnipsExpandTrigger="<tab>"
+   let g:UltiSnipsJumpForwardTrigger="<tab>"
+   let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+   let g:UltiSnipsDontReverseSearchPath=0
 " 
 " Vim Ultisnips CSS: Fast CSS snippets ---------------------------------------
   Bundle 'rstacruz/vim-ultisnips-css'
