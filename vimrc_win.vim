@@ -65,6 +65,7 @@ endfunction
   "" :BundleSearch(!) foo - search(or refresh cache first) for foo
   "" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
   Bundle 'm-kat/aws-vim'
+  let g:AWSVimValidate = 1
   "aws-vim
   Bundle 'airblade/vim-gitgutter'
   "A Vim plugin which shows a git diff in the gutter (sign column) and stages/reverts hunks. 
@@ -375,6 +376,7 @@ if $VIM_MINIMAL != '1'
 "  <Tab>  - Expand snippet
 " 
    let g:UltiSnipsUsePythonVersion = 3
+   "let g:UltiSnipsSnippetDirectories=["$VIMRUNTIME/../../../Data/vimfiles/bundle/aws-vim/snips"]
    let g:UltiSnipsExpandTrigger="<tab>"
    let g:UltiSnipsJumpForwardTrigger="<tab>"
    let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
