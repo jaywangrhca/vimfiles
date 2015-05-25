@@ -37,6 +37,7 @@ let g:mapleader=" "
   "" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
   Bundle 'm-kat/aws-vim'
   "aws-vim
+  let g:AWSVimValidate = 1
   Bundle 'airblade/vim-gitgutter'
   "A Vim plugin which shows a git diff in the gutter (sign column) and stages/reverts hunks. 
   Bundle 'kshenoy/vim-signature'
@@ -345,7 +346,7 @@ if $VIM_MINIMAL != '1'
 " 
 "  <Tab>  - Expand snippet
 
-   let g:UltiSnipsUsePythonVersion = 3
+   let g:UltiSnipsUsePythonVersion = 2
    let g:UltiSnipsExpandTrigger="<tab>"
    let g:UltiSnipsJumpForwardTrigger="<tab>"
    let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
