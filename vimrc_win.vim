@@ -376,7 +376,7 @@ if $VIM_MINIMAL != '1'
 "  <Tab>  - Expand snippet
 " 
    let g:UltiSnipsUsePythonVersion = 3
-   "let g:UltiSnipsSnippetDirectories=["$VIMRUNTIME/../../../Data/vimfiles/bundle/aws-vim/snips"]
+   let g:UltiSnipsSnippetDirectories=["UltiSnips","../aws-vim/snips", "../../UltiSnips"]
    let g:UltiSnipsExpandTrigger="<tab>"
    let g:UltiSnipsJumpForwardTrigger="<tab>"
    let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
