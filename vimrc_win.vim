@@ -12,12 +12,12 @@ filetype off
 """""""""""""
 " adjust configuration for such hostile environment as Windows
 if has("win32") || has("win16")
-    source $VIMRUNTIME/../../../Data/vimfiles/bundle/Vundle.vim/autoload/vundle.vim
+    source ~/vimfiles/bundle/Vundle.vim/autoload/vundle.vim
     set nocompatible              " be iMproved
     filetype off                  " required!
-    set rtp+=$VIMRUNTIME/../../../Data/vimfiles/bundle/Vundle.vim/
+    set rtp+=~/vimfiles/bundle/Vundle.vim/
     " change bundle install dir
-    call vundle#rc("$VIMRUNTIME/../../../Data/vimfiles/bundle/")
+    call vundle#rc("~/vimfiles/bundle/")
 else
     source ~/vimfiles/bundle/Vundle.vim/autoload/vundle.vim
     set nocompatible              " be iMproved
