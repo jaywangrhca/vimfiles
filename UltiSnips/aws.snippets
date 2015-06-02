@@ -1,0 +1,77 @@
+snippet dhcp "AWS::EC2::DHCPOptions"
+{
+    "Type" : "AWS::EC2::DHCPOptions",
+    "Properties" : {
+        "DomainName" : ${1:#String },
+        "DomainNameServers" : [ ${2:#String }],
+        "NetbiosNameServers" : [ ${3:#String }],
+        "NetbiosNodeType" : ${4:#Number },
+        "NtpServers" : [ ${5:#String }],
+        "Tags" : [ ${6:#EC2-Tag }]
+    }
+}
+endsnippet
+
+snippet gateway "AWS::EC2::InternetGateway"
+{
+    "Type" : "AWS::EC2::InternetGateway",
+    "Properties" : {
+        "Tags" : [ ${1:#EC2-Tag }]
+    }
+}
+endsnippet
+
+snippet vpcdhcp "AWS::EC2::VPCDHCPOptionsAssociation"
+{
+    "Type" : "AWS::EC2::VPCDHCPOptionsAssociation",
+    "Properties" : {
+        "DhcpOptionsId" : ${1:#String },
+        "VpcId" : ${2:#String }
+    }
+}
+endsnippet
+
+snippet vpcgateway "AWS::EC2::VPCGatewayAttachment"
+{
+    "Type" : "AWS::EC2::VPCGatewayAttachment",
+    "Properties" : {
+        "InternetGatewayId" : ${1:#String },
+        "VpcId" : ${2:#String },
+        "VpnGatewayId" : ${3:#String }
+    }
+}
+endsnippet
+
+snippet route "AWS::EC2::Route"
+{
+    "Type" : "AWS::EC2::Route",
+    "Properties" : {
+        "DestinationCidrBlock" : ${1:#String },
+        "GatewayId" : ${2:#String },
+        "InstanceId" : ${3:#String },
+        "NetworkInterfaceId" : ${4:#String },
+        "RouteTableId" : ${5:#String },
+        "VpcPeeringConnectionId" : ${6:#String },
+    }
+}
+endsnippet
+
+snippet routetable "AWS::EC2::RouteTable"
+{
+    "Type" : "AWS::EC2::RouteTable",
+    "Properties" : {
+        "VpcId" : ${1:#String },
+        "Tags" : [ ${2:#EC2-Tag }]
+    }
+}
+endsnippet
+
+snippet subnetrt "AWS::EC2::SubnetRouteTableAssociation"
+{
+    "Type" : "AWS::EC2::SubnetRouteTableAssociation",
+    "Properties" : {
+        "RouteTableId" : ${1:#String },
+        "SubnetId" : ${2:#String },
+    }
+}
+endsnippet
