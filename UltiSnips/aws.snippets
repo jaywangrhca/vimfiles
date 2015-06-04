@@ -75,3 +75,34 @@ snippet subnetrt "AWS::EC2::SubnetRouteTableAssociation"
     }
 }
 endsnippet
+
+snippet nics "NetworkInterface Embedded"
+[{
+    "AssociatePublicIpAddress" : ${1:#Boolean },
+    "DeleteOnTermination" : ${2:#Boolean },
+    "Description" : ${3:#String },
+    "DeviceIndex" : ${4:#String },
+    "GroupSet" : [ ${5:#String}, ... ],
+    "NetworkInterfaceId" : ${6:#String },
+    "PrivateIpAddress" : ${7:#String },
+    "PrivateIpAddresses" : [ ${8:#PrivateIpAddressSpecification }, ... ],
+    "SecondaryPrivateIpAddressCount" : ${9:#Integer },
+    "SubnetId" : ${10:#String },
+}]
+endsnippet
+
+snippet networkinterface "AWS::EC2::NetworkInterface"
+{
+    "Type" : "AWS::EC2::NetworkInterface",
+    "Properties" : {
+        "Description" : ${1:#String },
+        "GroupSet" : [ ${2:#String } ],
+        "PrivateIpAddress" : ${3:#String },
+        "PrivateIpAddresses" : [ ${4:#PrivateIpAddressSpecification }, ... ],
+        "SecondaryPrivateIpAddressCount" : ${5:#Integer },
+        "SourceDestCheck" : ${6:#Boolean },
+        "SubnetId" : ${7:#String },
+        "Tags" : [ ${8:#Resource_Tag }, ... ],
+    }
+}
+endsnippet
