@@ -35,6 +35,8 @@ let g:mapleader=" "
   "" :BundleInstall(!)    - install(update) bundles
   "" :BundleSearch(!) foo - search(or refresh cache first) for foo
   "" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+  Bundle 'ngmy/vim-rubocop'
+  " rubocop
   Bundle 'm-kat/aws-vim'
   "aws-vim
   let g:AWSVimValidate = 1
