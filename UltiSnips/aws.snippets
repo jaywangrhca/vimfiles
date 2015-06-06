@@ -106,3 +106,17 @@ snippet networkinterface "AWS::EC2::NetworkInterface"
     }
 }
 endsnippet
+
+snippet stack "AWS::CloudFormation::Stack"
+{
+    "Type" : "AWS::CloudFormation::Stack",
+    "Properties" : {
+        "NotificationARNs" : [ ${1:#String } ],
+        "Parameters" : { 
+            ${2:#Parameters}
+        },
+            "TemplateURL" : ${3:#String },
+            "TimeoutInMinutes" : ${4:#String }
+    }
+}
+endsnippet
