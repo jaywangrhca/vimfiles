@@ -117,23 +117,6 @@ let g:mapleader=" "
 
   au Filetype taskpaper hi link taskpaperComment       Text
 
-" NERDTree: Project drawer ---------------------------------------------------
-  " Bundle 'tpope/vinegar'
-  Bundle 'scrooloose/nerdtree'
-
-  "" <leader>nt  - open NERDTree
-  "" <leader>nd  - open NERDTree drawer
-
-  let NERDTreeDirArrows=1
-  let NERDTreeMouseMode=2
-  let NERDTreeMinimalUI=1
-  let NERDTreeStatusline=' '
-  let NERDTreeWinPos='left'
-  let NERDTreeWinSize=50
-  let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
-  map <leader>nd :NERDTreeToggle<CR>
-  map <leader>nt :e .<CR>
-
 " == Non-essential plugins ===================================================
 if $VIM_MINIMAL != '1'
 
@@ -149,6 +132,34 @@ if $VIM_MINIMAL != '1'
   Bundle 'Shougo/unite.vim'
   Bundle 'Shougo/unite-outline'
   Bundle 'Shougo/vimfiler.vim'
+  " use this function to toggle vimfiler
+  function! s:vimfiler_toggle()
+    if &filetype == 'vimfiler'
+      execute 'silent! buffer #'
+      if &filetype == 'vimfiler'
+        execute 'enew'
+      endif
+    elseif exists('t:vimfiler_buffer') && bufexists(t:vimfiler_buffer)
+      execute 'buffer ' . t:vimfiler_buffer
+    else
+      execute 'VimFilerCreate'
+      let t:vimfiler_buffer = @%
+    endif
+  endfunction
+
+  " make vimfiler buffer behave
+  function! s:vimfiler_buffer_au()
+    setlocal nobuflisted
+    setlocal colorcolumn=
+  endfunction
+  autocmd FileType vimfiler call s:vimfiler_buffer_au()
+  let g:vimfiler_as_default_explorer = 1
+  let g:vimfiler_safe_mode_by_default = 0
+  let g:vimfiler_tree_leaf_icon = ' '
+  let g:vimfiler_tree_opened_icon = '▾ '
+  let g:vimfiler_tree_closed_icon = '▸ '
+  let g:vimfiler_enable_auto_cd = 1
+
   Bundle 'tsukkee/unite-tag'
 
   call unite#filters#matcher_default#use(['matcher_fuzzy'])
@@ -555,18 +566,13 @@ set expandtab
 " Be smart when using tabs ;)
 set smarttab
 
-" 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
+" 1 tab == 2 spaces
+set shiftwidth=2 tabstop=2
+set autoindent
 
 " Linebreak on 500 characters
 set lbr
 set tw=500
-
-set ai "Auto indent
-set si "Smart indent
-set wrap "Wrap lines
-
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
@@ -862,28 +868,16 @@ set foldenable
 set foldmethod=indent
 set foldlevel=10
 nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
-set textwidth=78
+set textwidth=80
 set complete=.,w
 " set ft=todolist
 set fileformat=unix
 set clipboard=unnamedplus
 set guioptions-=m
-autocmd VimEnter * NERDTree
+autocmd VimEnter * VimFiler -buffer-name=explorer -split -simple -winwidth=50 -toggle -no-quit
 autocmd VimEnter * wincmd p
-
-"if has("gui_running")
-"  " GUI is running or is about to start.
-"  " Maximize gvim window (for an alternative on Windows, see simalt below).
-"  set lines=999 columns=999
-"else
-"  " This is console Vim.
-"  if exists("+lines")
-"    set lines=50
-"  endif
-"  if exists("+columns")
-"    set columns=100
-"  endif
-"endif
+autocmd BufEnter * lcd %:p:h
+set wrap
 
 " Buffer Mapping
 nnoremap <silent>[b :bprevious<CR>
